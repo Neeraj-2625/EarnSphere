@@ -7,7 +7,7 @@ const CourseCard = ({ course }) => {
         <h3 className="text-xl text-center text-[#F4CCE9] font-bold font-serif md-2">{course.title}</h3>
         <div className="w-40 h-40 mx-auto border border-[#56021F] rounded-2xl overflow-hidden">
           <img
-            src={`../src/images/${course.img}`}
+            src={`/images/${course.img}`}
             alt={`${course.title}`}
             className="w-full h-full object-fit"
           />

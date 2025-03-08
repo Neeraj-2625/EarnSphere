@@ -23,7 +23,7 @@ const Home = () => {
       <div className="mt-6">
         <div className="w-40 h-40 mx-auto border-4 border-[#56021F] rounded-full overflow-hidden">
           <img
-            src="../src/images/profile.jpg"
+            src="/images/profile.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />

@@ -11,7 +11,7 @@ const Payment = () => {
     return (
       <div className="flex flex-col items-center p-6">
         <img
-          src="../src/images/scanner.jpg"
+          src="/images/scanner.jpg"
           alt="Payment"
           className="w-72 h-auto rounded-lg shadow-lg"
         />
