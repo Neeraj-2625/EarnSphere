@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <>
-    <div className="text-center p-10 pt-24"> {/* Added pt-24 to prevent overlap with fixed navbar */}
+    <div className="text-center p-10 pt-24 font-serif"> {/* Added pt-24 to prevent overlap with fixed navbar */}
       {/* Hero Section */}
       <h2 className="text-3xl font-bold text-[#56021F]">
         WelCome to <span className="text-[#7D1C4A]">EarnSphere</span>
@@ -23,7 +23,7 @@ const Home = () => {
       <div className="mt-6">
         <div className="w-40 h-40 mx-auto border-4 border-[#56021F] rounded-full overflow-hidden">
           <img
-            src="../src/assets/profile.png"
+            src="../src/images/profile.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />

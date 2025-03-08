@@ -40,7 +40,7 @@ const Navbar = () => {
           </button>
 
           {/* Desktop menu */}
-          <ul className="hidden md:flex space-x-6">
+          <ul className="hidden md:flex space-x-6 font-bold font-serif">
             <li>
               <Link to="/" className="text-[#F4CCE9] hover:text-gray-300">Home</Link>
             </li>
@@ -55,16 +55,16 @@ const Navbar = () => {
 
         {/* Mobile menu dropdown */}
         {isOpen && (
-          <div className="md:hidden bg-blue-700 py-2">
+          <div className="md:hidden bg-[#56021F] font-bold font-serif py-2">
             <ul className="space-y-2 text-center">
               <li>
-                <Link to="/" className="block py-2 text-white" onClick={() => setIsOpen(false)}>Home</Link>
+                <Link to="/" className="block py-2 text-[#F4CCE9] hover:text-gray-300" onClick={() => setIsOpen(false)}>Home</Link>
               </li>
               <li>
-                <Link to="/courses" className="block py-2 text-white" onClick={() => setIsOpen(false)}>Courses</Link>
+                <Link to="/courses" className="block py-2 text-[#F4CCE9] hover:text-gray-300" onClick={() => setIsOpen(false)}>Courses</Link>
               </li>
               <li>
-                <Link to="/blog" className="block py-2 text-white" onClick={() => setIsOpen(false)}>Blog</Link>
+                <Link to="/blog" className="block py-2 text-[#F4CCE9] hover:text-gray-300" onClick={() => setIsOpen(false)}>Blog</Link>
               </li>
             </ul>
           </div>
