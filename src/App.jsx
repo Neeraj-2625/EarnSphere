@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Payment from './pages/Payment';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/payment' element={<Payment/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
           </Routes>
           <Footer/>
         </div>

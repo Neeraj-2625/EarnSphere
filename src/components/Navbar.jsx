@@ -50,6 +50,9 @@ const Navbar = () => {
             <li>
               <Link to="/blog" className="text-[#F4CCE9] hover:text-gray-300">Blog</Link>
             </li>
+            <li>
+              <Link to="/login" className="text-[#F4CCE9] hover:text-gray-300">Login</Link>
+            </li>
           </ul>
         </div>
 
@@ -65,6 +68,9 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/blog" className="block py-2 text-[#F4CCE9] hover:text-gray-300" onClick={() => setIsOpen(false)}>Blog</Link>
+              </li>
+              <li>
+                <Link to="/login" className="block py-2 text-[#F4CCE9] hover:text-gray-300" onClick={() => setIsOpen(false)}>Login</Link>
               </li>
             </ul>
           </div>

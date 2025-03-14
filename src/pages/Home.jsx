@@ -13,10 +13,10 @@ const Home = () => {
         India's Best E-Learning Platform
       </p>
       <Link
-        to="/courses"
+        to="/register"
         className="mt-4 inline-block bg-[#56021F] text-[#F4CCE9] px-6 py-3 rounded-lg font-semibold"
       >
-        Browse Courses→
+        Register→
       </Link>
 
       {/* Profile Image Section */}
