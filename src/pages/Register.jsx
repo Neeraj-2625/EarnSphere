@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { EyeIcon, EyeOffIcon } from "@heroicons/react/solid"; // Import eye icons
+import { useNavigate } from "react-router-dom";
 
-const Register = ({ onRegister }) => {
+const Register = () => {
+    const navigate = useNavigate();
     const [user, setUser] = useState({
       name: "",
       phone: "",
       email: "",
       password: "",
       course: "premium", // Default course selection
+      userName:"",
+      referId:""
     });
     const [showPassword, setShowPassword] = useState(false);
   
@@ -17,9 +21,30 @@ const Register = ({ onRegister }) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(user);
       onRegister(user);
     };
+
+    const onRegister = async (user) => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_END_POINT}/register`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        });
+    
+        if (!response.ok) {
+          const errorData = await response.json(); // Get error details from the server
+          throw new Error(errorData.error || "Error registering user.");
+        }
+    
+        alert("Registration successful!");
+        navigate('/payment');
+      } catch (error) {
+        console.error("Registration Error:", error);
+        alert(error.message || "Something went wrong. Please try again.");
+      }
+    };
+    
   
     return (
       <div className="flex justify-center font-bold font-serif items-center min-h-screen bg-[#F4CCE9]">
@@ -37,6 +62,15 @@ const Register = ({ onRegister }) => {
             onChange={handleChange}
             required
           />
+
+          <input
+            type="text"
+            name="userName"
+            placeholder="UserName"
+            className="w-full p-3 mb-2 border rounded-2xl"
+            onChange={handleChange}
+            required
+          />
   
           <input
             type="tel"
@@ -46,6 +80,7 @@ const Register = ({ onRegister }) => {
             onChange={handleChange}
             required
           />
+
   
           <input
             type="email"
@@ -77,6 +112,15 @@ const Register = ({ onRegister }) => {
               )}
             </button>
           </div>
+
+          <input
+            type="text"
+            name="referId"
+            placeholder="Referral"
+            className="w-full p-3 mb-2 border rounded-2xl"
+            onChange={handleChange}
+            required
+          />
   
           {/* Course Selection */}
           <h3 className="text-lg font-semibold mb-2">Select a Course:</h3>

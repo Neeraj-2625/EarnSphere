@@ -38,7 +38,7 @@ const Home = () => {
           </div>
           <div className="ml-4 text-left">
             <p className="text-2xl font-bold text-[#56021F]">20+</p>
-            <p className="text-gray-700">Trainers</p>
+            <p className="text-[#56021F]">Trainers</p>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
           <div className="ml-4 text-left">
             <p className="text-2xl font-bold text-[#56021F]">20K+</p>
-            <p className="text-gray-700">Students Enrolled</p>
+            <p className="text-[#56021F]">Students Enrolled</p>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
           </div>
           <div className="ml-4 text-left">
             <p className="text-2xl font-bold text-[#56021F]">150+</p>
-            <p className="text-gray-700">Live Trainings</p>
+            <p className="text-[#56021F]">Live Trainings</p>
           </div>
         </div>
 
@@ -68,7 +68,7 @@ const Home = () => {
           </div>
           <div className="ml-4 text-left">
             <p className="text-2xl font-bold text-[#56021F]">2 Lakh+</p>
-            <p className="text-gray-700">Community Earnings</p>
+            <p className="text-[#56021F]">Community Earnings</p>
           </div>
         </div>
       </div>
